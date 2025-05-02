@@ -1,46 +1,29 @@
-'use client';
 import { Button } from '@/components/ui/button';
 import { TextAnimate, BlurFade, CountUp } from '@/components/animation';
 import Link from 'next/link';
 import Magnet from '@/components/ui/magnet';
-import { Spotlight } from '@/components/ui/spotlight-new';
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+// import { Boxes } from '@/components/ui/background-boxes';
+// import { AuroraBackground } from '@/components/ui/aurora-background';
 
 export const Hero = () => {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const isLight = mounted && resolvedTheme === 'light';
-
   return (
     <>
-      <div
-        className={`relative h-[40rem] w-full flex items-center justify-center px-4 sm:px-6 overflow-hidden ${
-          isLight ? 'bg-slate-50/90' : 'bg-black/[0.96]'
-        } antialiased bg-grid-white/[0.02]`}
-      >
-        <Spotlight duration={10} />
+      <div className='relative flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 md:py-28 overflow-hidden'>
+        <div className='absolute inset-0 -z-10'>
+          {/* <AuroraBackground>
+            <div className='h-full w-full'></div>
+          </AuroraBackground> */}
+        </div>
 
-        <div className='relative z-10 mx-auto max-w-7xl w-full pt-20 md:pt-0 text-center'>
+        <div className='text-center max-w-2xl relative z-10 mx-auto px-2 sm:px-4'>
           <TextAnimate
             as={'h1'}
-            className={`text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent ${
-              isLight
-                ? 'bg-gradient-to-b from-slate-900 to-slate-600'
-                : 'bg-gradient-to-b from-neutral-50 to-neutral-400'
-            }`}
+            className='mt-4 sm:mt-6 text-3xl sm:text-5xl md:text-6xl md:leading-[1.2] leading-tight font-bold'
             once
             animation='blurInDown'
             duration={0.3}
           >
-            Kami Jokiin Proyek <br className='md:hidden' /> Kodingan Kamu,{' '}
-            <br />
-            Mulai dari{' '}
+            Kami Jokiin Proyek Kodingan Kamu, Mulai dari{' '}
             <span className='text-primary'>
               <CountUp
                 from={0}
@@ -54,9 +37,7 @@ export const Hero = () => {
             Aja!
           </TextAnimate>
           <TextAnimate
-            className={`mt-6 font-normal text-base ${
-              isLight ? 'text-slate-700' : 'text-neutral-300'
-            } max-w-lg text-center mx-auto`}
+            className='mt-6 text-[15px] sm:text-[17px] md:text-lg text-foreground/75 mx-auto max-w-md sm:max-w-xl'
             as={'p'}
             once
             animation='blurInDown'
@@ -65,7 +46,8 @@ export const Hero = () => {
           >
             Lupakan coding yang membuat pusing! Dapatkan proyek IT berkualitas
             tinggi tanpa stress deadline. Tim ahli kami siap memberikan solusi
-            kilat dengan hasil mengesankan.
+            kilat dengan hasil mengesankan yang dijamin membuat dosen & klien
+            Anda terpukau.
           </TextAnimate>
           <div className='mt-8 sm:mt-12 flex items-center justify-center gap-4'>
             <BlurFade>

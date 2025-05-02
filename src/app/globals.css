@@ -44,25 +44,7 @@
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   --animate-aurora: aurora 60s linear infinite;
-  --animate-shimmer: shimmer 2s linear infinite;
-
-  @keyframes aurora {
-    from {
-      background-position: 50% 50%, 50% 50%;
-    }
-    to {
-      background-position: 350% 50%, 350% 50%;
-    }
-  }
-
-  @keyframes shimmer {
-    from {
-      background-position: 0 0;
-    }
-    to {
-      background-position: -200% 0;
-    }
-  }
+  --animate-shimmer: shimmer 4s linear infinite;
 }
 @keyframes marquee {
   from {
@@ -181,6 +163,40 @@
       rgba(var(--foreground-rgb), 0.05) 1px,
       transparent 1px
     );
+}
+
+/* Grid pattern background for spotlight effect */
+.bg-grid-white\/\[0\.02\] {
+  background-size: 40px 40px;
+}
+
+/* Dark theme grid */
+.dark .bg-grid-white\/\[0\.02\] {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Light theme grid */
+:not(.dark) .bg-grid-white\/\[0\.02\] {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
 
 .bg-noise-pattern {

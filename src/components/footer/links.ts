@@ -5,14 +5,14 @@ export const links = [
   },
   {
     label: "Tentang kami",
-    href: "/tentang-kami",
+    href: "/",
   },
   {
     label: "Promo",
-    href: "/acara",
+    href: "/",
   },
   {
     label: "Layanan",
-    href: "/merchandise",
+    href: "/",
   },
 ];

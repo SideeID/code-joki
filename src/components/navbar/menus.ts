@@ -2,15 +2,15 @@ import type { NavMenu } from "./menu";
 
 export const navbarMenus: NavMenu[] = [
   {
-    label: "Beranda",
-    url: "#",
+    label: 'Beranda',
+    url: '#',
   },
   {
-    label: "Tentang kami",
-    url: "#tentang",
+    label: 'Tentang kami',
+    url: '#tentang',
   },
   {
-    label: "Layanan",
-    url: "#merchandise",
+    label: 'Layanan',
+    url: '#projects',
   },
 ];

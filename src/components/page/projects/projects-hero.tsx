@@ -4,6 +4,7 @@ import { WavyBackground } from '@/components/ui/wavy-background';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { motion } from 'motion/react';
+import Link from 'next/link';
 
 export function ProjectsHero() {
   return (
@@ -49,8 +50,9 @@ export function ProjectsHero() {
           <Button
             size='lg'
             className='bg-primary hover:bg-primary/90 text-white transition-all'
+            asChild
           >
-            Konsultasi Gratis
+            <Link href='#join'>Konsultasi Gratis</Link>
           </Button>
         </div>
 

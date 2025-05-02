@@ -17,11 +17,13 @@ export const Navbar = ({
     >
       <nav className='h-16 bg-background/40 backdrop-blur-xl border-2 border-white/30 dark:border-white/10 rounded-xl shadow-lg mx-auto max-w-7xl transition-all duration-300 hover:shadow-xl hover:border-white/50 dark:hover:border-white/20 ring-1 ring-white/10 dark:ring-white/5'>
         <div className='h-full flex items-center justify-between px-4 sm:px-6 lg:px-8'>
-          <Logo
-            width={120}
-            height={30}
-            className='transition-transform hover:scale-105'
-          />
+          <Link href="/">
+            <Logo
+              width={120}
+              height={30}
+              className='transition-transform hover:scale-105'
+            />
+          </Link>
 
           {/* Desktop Menu */}
           <NavMenu className='hidden md:block' />

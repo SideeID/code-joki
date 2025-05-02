@@ -1,6 +1,7 @@
 import { Navbar } from "../navbar";
 import { Footer } from "../footer";
 import { ScrollToTop } from "../ui/scroll-to-top";
+import SchemaOrg from "./schema-org";
 
 export const Baseayout = ({
    children
@@ -8,13 +9,14 @@ export const Baseayout = ({
    children: React.ReactNode
 }) => {
    return (
-      <>
-      <Navbar />
-      <main className="min-h-svh border-x max-w-screen-xl mx-auto">
+     <>
+       <Navbar />
+       <SchemaOrg />
+       <main className='min-h-svh border-x max-w-screen-xl mx-auto'>
          {children}
-      </main>
-      <ScrollToTop />
-      <Footer />
-      </>
-   )
+       </main>
+       <ScrollToTop />
+       <Footer />
+     </>
+   );
 };

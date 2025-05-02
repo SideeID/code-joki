@@ -13,6 +13,7 @@ type SpotlightProps = {
   smallWidth?: number;
   duration?: number;
   xOffset?: number;
+  animated?: boolean;
 };
 
 export const Spotlight = ({
@@ -25,11 +26,11 @@ export const Spotlight = ({
   smallWidth = 240,
   duration = 7,
   xOffset = 100,
+  animated = false,
 }: SpotlightProps = {}) => {
   const { resolvedTheme } = useTheme();
   const isLight = resolvedTheme === 'light';
 
-  // Default gradients with theme awareness
   const lightGradients = {
     first:
       'radial-gradient(68.54% 68.72% at 55.02% 31.46%, rgba(37, 99, 235, 0.1) 0, rgba(37, 99, 235, 0.05) 50%, rgba(37, 99, 235, 0.02) 80%)',
@@ -55,30 +56,34 @@ export const Spotlight = ({
   const third =
     gradientThird || (isLight ? lightGradients.third : darkGradients.third);
 
+  const Container = animated ? motion.div : 'div';
+  const AnimatableDiv = animated ? motion.div : 'div';
+
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1.5,
-      }}
+    <Container
       className='pointer-events-none absolute inset-0 h-full w-full'
+      {...(animated
+        ? {
+            initial: { opacity: 0 },
+            animate: { opacity: 1 },
+            transition: { duration: 1.5 },
+          }
+        : { style: { opacity: 1 } })}
     >
-      <motion.div
-        animate={{
-          x: [0, xOffset, 0],
-        }}
-        transition={{
-          duration,
-          repeat: Infinity,
-          repeatType: 'reverse',
-          ease: 'easeInOut',
-        }}
+      {/* Left side gradients - static position if not animated */}
+      <AnimatableDiv
         className='absolute top-0 left-0 w-screen h-screen z-40 pointer-events-none'
+        {...(animated
+          ? {
+              animate: { x: [0, xOffset, 0] },
+              transition: {
+                duration,
+                repeat: Infinity,
+                repeatType: 'reverse',
+                ease: 'easeInOut',
+              },
+            }
+          : {})}
       >
         <div
           style={{
@@ -87,7 +92,7 @@ export const Spotlight = ({
             width: `${width}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 left-0`}
+          className='absolute top-0 left-0'
         />
 
         <div
@@ -97,7 +102,7 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 left-0 origin-top-left`}
+          className='absolute top-0 left-0 origin-top-left'
         />
 
         <div
@@ -107,21 +112,24 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 left-0 origin-top-left`}
+          className='absolute top-0 left-0 origin-top-left'
         />
-      </motion.div>
+      </AnimatableDiv>
 
-      <motion.div
-        animate={{
-          x: [0, -xOffset, 0],
-        }}
-        transition={{
-          duration,
-          repeat: Infinity,
-          repeatType: 'reverse',
-          ease: 'easeInOut',
-        }}
+      {/* Right side gradients - static position if not animated */}
+      <AnimatableDiv
         className='absolute top-0 right-0 w-screen h-screen z-40 pointer-events-none'
+        {...(animated
+          ? {
+              animate: { x: [0, -xOffset, 0] },
+              transition: {
+                duration,
+                repeat: Infinity,
+                repeatType: 'reverse',
+                ease: 'easeInOut',
+              },
+            }
+          : {})}
       >
         <div
           style={{
@@ -130,7 +138,7 @@ export const Spotlight = ({
             width: `${width}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 right-0`}
+          className='absolute top-0 right-0'
         />
 
         <div
@@ -140,7 +148,7 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 right-0 origin-top-right`}
+          className='absolute top-0 right-0 origin-top-right'
         />
 
         <div
@@ -150,9 +158,9 @@ export const Spotlight = ({
             width: `${smallWidth}px`,
             height: `${height}px`,
           }}
-          className={`absolute top-0 right-0 origin-top-right`}
+          className='absolute top-0 right-0 origin-top-right'
         />
-      </motion.div>
-    </motion.div>
+      </AnimatableDiv>
+    </Container>
   );
 };

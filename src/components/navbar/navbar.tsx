@@ -4,6 +4,7 @@ import { NavMenu } from './nav-menu';
 import { NavigationSheet } from './navigation-sheet';
 import { ThemeSwitcher } from './theme-switcher';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 export const Navbar = ({
   className,
@@ -30,7 +31,7 @@ export const Navbar = ({
               asChild
               className='transition-all hover:scale-105 active:scale-95'
             >
-              <a href='#join'>Bergabung</a>
+              <Link href='#join'>Bergabung</Link>
             </Button>
             <ThemeSwitcher className='transition-all hover:scale-105 active:scale-95' />
 

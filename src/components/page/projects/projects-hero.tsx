@@ -17,6 +17,7 @@ export function ProjectsHero() {
       blur={10}
       waveOpacity={0.7}
       speed='fast'
+      animated={false} 
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -52,24 +53,9 @@ export function ProjectsHero() {
             className='bg-primary hover:bg-primary/90 text-white transition-all'
             asChild
           >
-            <Link href='#join'>Konsultasi Gratis</Link>
+            <Link href='/#join'>Konsultasi Gratis</Link>
           </Button>
         </div>
-
-        {/* <div className='flex justify-center gap-8 pt-8'>
-          <div className='text-center'>
-            <p className='text-3xl md:text-4xl font-bold text-white'>25+</p>
-            <p className='text-sm text-white/70'>Template Siap Pakai</p>
-          </div>
-          <div className='text-center'>
-            <p className='text-3xl md:text-4xl font-bold text-white'>98%</p>
-            <p className='text-sm text-white/70'>Tingkat Kepuasan</p>
-          </div>
-          <div className='text-center'>
-            <p className='text-3xl md:text-4xl font-bold text-white'>24/7</p>
-            <p className='text-sm text-white/70'>Dukungan Teknis</p>
-          </div>
-        </div> */}
       </motion.div>
     </WavyBackground>
   );

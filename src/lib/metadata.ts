@@ -14,7 +14,9 @@ export function generateMetadata({
   path = '',
   image,
 }: MetadataProps): Metadata {
-  const metaTitle = title ? `${title} | ${siteConfig.title.split(' - ')[0]}` : siteConfig.title;
+  const metaTitle = title
+    ? `${title} | ${siteConfig.title.split(' - ')[0]}`
+    : siteConfig.title;
   const metaDescription = description || siteConfig.description;
   const url = `${siteConfig.url}${path}`;
   const ogImage = image || siteConfig.openGraph;
@@ -28,9 +30,18 @@ export function generateMetadata({
     alternates: {
       canonical: url,
     },
-    robots: siteConfig.robots,
+    robots: {
+      index: siteConfig.robots.index,
+      follow: siteConfig.robots.follow,
+      googleBot: {
+        index: siteConfig.robots.googleBot.index,
+        follow: siteConfig.robots.googleBot.follow,
+        'max-image-preview': 'large',
+        'max-snippet': siteConfig.robots.googleBot['max-snippet'],
+      },
+    },
     openGraph: {
-      type: siteConfig.type,
+      type: 'website',
       locale: siteConfig.locale,
       url,
       title: metaTitle,

@@ -30,42 +30,42 @@ export const Footer = () => {
           ))}
         </div>
         <div className='my-8 flex flex-wrap justify-center gap-6 text-sm'>
-          <a
-            href={siteConfig.links.instagram}
+          <Link
+            href={siteConfig.links.instagram || '#'}
             target='_blank'
             rel='noopener noreferrer'
             aria-label={'instagram'}
             className='text-muted-foreground hover:text-primary block'
           >
             <Instagram className='size-6' />
-          </a>
-          <a
-            href={siteConfig.links.facebook}
+          </Link>
+          <Link
+            href={siteConfig.links.facebook || '#'}
             target='_blank'
             rel='noopener noreferrer'
             aria-label={'facebook'}
             className='text-muted-foreground hover:text-primary block'
           >
             <Facebook className='size-6' />
-          </a>
-          <a
-            href={siteConfig.links.discord}
+          </Link>
+          <Link
+            href={siteConfig.links.discord || '#'}
             target='_blank'
             rel='noopener noreferrer'
             aria-label={'discord'}
             className='text-muted-foreground hover:text-primary block'
           >
             <Discord className='size-6' />
-          </a>
-          <a
-            href={siteConfig.links.github}
+          </Link>
+          <Link
+            href={siteConfig.links.github || '#'}
             target='_blank'
             rel='noopener noreferrer'
             aria-label={'github'}
             className='text-muted-foreground hover:text-primary block'
           >
             <GitHub className='size-6' />
-          </a>
+          </Link>
         </div>
         <span className='text-muted-foreground block text-center text-sm'>
           {' '}

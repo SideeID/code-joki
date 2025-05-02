@@ -30,7 +30,7 @@ export function NavMenu({
                     {menu.items.map((item) => (
                       <li key={item.title}>
                         <NavigationMenuLink asChild>
-                          <a
+                          <Link
                             className='flex items-start gap-2 p-3 rounded-md transition-all duration-200 
                                       hover:bg-accent hover:text-primary hover:translate-x-1
                                       focus:bg-accent active:scale-95'
@@ -45,7 +45,7 @@ export function NavMenu({
                                 {item.description}
                               </p>
                             </div>
-                          </a>
+                          </Link>
                         </NavigationMenuLink>
                       </li>
                     ))}

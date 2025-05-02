@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import {
   Hero,
   About,
@@ -6,6 +7,14 @@ import {
   ReadyProjects,
 } from '@/components/page/home';
 import { Shade } from '@/components/ui/shade';
+import { generateMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = generateMetadata({
+  title: 'Jasa Pemrograman & Bantuan Coding Profesional',
+  description:
+    'Layanan joki coding profesional dengan harga terjangkau mulai dari 99K. Solusi cepat untuk tugas kuliah, proyek website, dan aplikasi berkualitas tinggi.',
+  path: '/',
+});
 
 export default function Home() {
   return (

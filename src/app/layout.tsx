@@ -10,7 +10,6 @@ const geistSans = Geist({
   weight: ["400"]
 });
 
-
 export const metadata: Metadata = {
   title: {
     template: `%s - ${siteConfig.title}`,

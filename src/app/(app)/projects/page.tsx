@@ -1,13 +1,14 @@
 import { Metadata } from 'next';
-import { AllProjectsList } from '@/components/page/projects/all-projects-list';
-import { ProjectsHero } from '@/components/page/projects/projects-hero';
+import { AllProjectsList, ProjectsHero } from '@/components/page/projects';
+import { generateMetadata } from '@/lib/metadata';
 import { Shade } from '@/components/ui/shade';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'Proyek Siap Pakai | CodeJoki',
   description:
     'Berbagai template dan boilerplate berkualitas tinggi yang dapat disesuaikan dengan kebutuhan spesifik Anda',
-};
+  path: '/projects',
+});
 
 export default function ProjectsPage() {
   return (

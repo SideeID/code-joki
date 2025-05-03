@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/accordion';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { faqCategories, faqItems } from '@/data/faq';
+import { faqCategories, faqItems } from '@/data/faqs';
 import { Search, Info, HelpCircle } from 'lucide-react';
 import { BlurFade, TextAnimate } from '@/components/animation';
 import { cn } from '@/lib/utils';

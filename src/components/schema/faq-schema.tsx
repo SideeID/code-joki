@@ -1,6 +1,6 @@
 'use client';
 
-import { faqItems } from '@/data/faq';
+import { faqItems } from '@/data/faqs';
 
 export default function FAQSchema() {
   const structuredData = {

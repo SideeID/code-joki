@@ -21,7 +21,6 @@ const CornerIcon = ({
 };
 
 export function AllProjectsList() {
-  // State to track all card heights for equal height adjustment
   const [categories] = useState([
     'Semua',
     ...Array.from(new Set(projects.map((p) => p.category))),
@@ -57,13 +56,11 @@ export function AllProjectsList() {
         {filteredProjects.map((project, index) => (
           <BlurFade key={project.id} delay={index * 0.1}>
             <div className='h-full border border-black/[0.2] dark:border-white/[0.2] bg-white/50 dark:bg-black/50 backdrop-blur-sm rounded-lg flex flex-col items-start w-full p-5 relative group transition-all duration-300 hover:shadow-lg hover:border-black/40 dark:hover:border-white/40'>
-              {/* Corner icons */}
               <CornerIcon className='absolute h-5 w-5 -top-2.5 -left-2.5 group-hover:rotate-90 transition-transform duration-300' />
               <CornerIcon className='absolute h-5 w-5 -bottom-2.5 -left-2.5 group-hover:-rotate-90 transition-transform duration-300' />
               <CornerIcon className='absolute h-5 w-5 -top-2.5 -right-2.5 group-hover:-rotate-90 transition-transform duration-300' />
               <CornerIcon className='absolute h-5 w-5 -bottom-2.5 -right-2.5 group-hover:rotate-90 transition-transform duration-300' />
 
-              {/* Card header with icon, title and badge */}
               <div className='flex items-center justify-between w-full mb-4'>
                 <div className='flex items-center gap-2'>
                   <div className='p-2 rounded-md bg-slate-100 dark:bg-slate-800'>
@@ -80,14 +77,12 @@ export function AllProjectsList() {
                 )}
               </div>
 
-              {/* Description with fixed height */}
               <div className='mb-4 h-[60px]'>
                 <p className='text-sm text-neutral-600 dark:text-neutral-400 line-clamp-3'>
                   {project.description}
                 </p>
               </div>
 
-              {/* Technologies section with fixed height */}
               <div className='mb-4 h-[80px]'>
                 <h4 className='text-xs uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2'>
                   Teknologi
@@ -104,7 +99,6 @@ export function AllProjectsList() {
                 </div>
               </div>
 
-              {/* Features section with fixed height */}
               <div className='mb-4 h-[100px]'>
                 <h4 className='text-xs uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2'>
                   Fitur Utama
@@ -127,7 +121,6 @@ export function AllProjectsList() {
                 </ul>
               </div>
 
-              {/* Card footer - Push to bottom with mt-auto */}
               <div className='w-full mt-auto pt-4 border-t border-black/10 dark:border-white/10'>
                 <div className='text-lg font-medium text-right mb-3 text-neutral-800 dark:text-neutral-300'>
                   {project.price}

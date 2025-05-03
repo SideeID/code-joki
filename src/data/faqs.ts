@@ -1,8 +1,4 @@
-export interface FAQItem {
-  question: string;
-  answer: string;
-  category?: string;
-}
+import type { FAQItem } from './faq';
 
 export const faqItems: FAQItem[] = [
   {
@@ -20,7 +16,7 @@ export const faqItems: FAQItem[] = [
   {
     question: 'Apakah hasil pekerjaan bisa direvisi?',
     answer:
-      'Tentu! Kami menyediakan garansi revisi tanpa batas sampai Anda puas dengan hasil pekerjaan. Kepuasan Anda adalah prioritas utama kami.',
+      'Tentu! Kami menyediakan maksimal 7x revisi minor (contoh: mengubah warna, tambahan fungsionalitas sederhana, dll.) untuk memastikan kepuasan Anda dengan hasil pekerjaan. Kepuasan Anda adalah prioritas utama kami.',
     category: 'Layanan',
   },
   {
@@ -42,12 +38,6 @@ export const faqItems: FAQItem[] = [
     category: 'Proses',
   },
   {
-    question: 'Apakah jasa ini legal dan etis?',
-    answer:
-      'Layanan kami berfokus untuk membantu dan mendukung proses pembelajaran. Kami menyarankan klien untuk memahami kode yang kami kerjakan dan menggunakannya sebagai referensi pembelajaran. Penggunaan layanan kami harus tetap memperhatikan kode etik institusi atau perusahaan masing-masing.',
-    category: 'Umum',
-  },
-  {
     question: 'Apakah CodeJoki menjamin kerahasiaan proyek saya?',
     answer:
       'Ya, kami menjamin 100% kerahasiaan proyek Anda. Semua informasi proyek dan data pribadi klien kami lindungi dengan ketat dan tidak akan dibagikan kepada pihak ketiga tanpa izin.',
@@ -64,6 +54,24 @@ export const faqItems: FAQItem[] = [
     answer:
       'Ya, setelah proyek selesai dan pembayaran lunas, Anda mendapatkan hak penuh atas kode yang kami buat. Anda bebas menggunakannya untuk keperluan pribadi maupun komersial sesuai kesepakatan.',
     category: 'Hukum',
+  },
+  {
+    question: 'Bagaimana sistem pembayaran untuk proyek?',
+    answer:
+      'Kami menggunakan sistem DP 50% di awal dan pelunasan setelah proyek selesai. DP digunakan untuk memulai pengerjaan proyek dan memastikan komitmen dari kedua belah pihak.',
+    category: 'Biaya',
+  },
+  {
+    question: 'Bagaimana dengan support setelah proyek selesai?',
+    answer:
+      'Kami memberikan garansi bug fix selama 14 hari setelah proyek selesai. Jika ditemukan bug atau masalah teknis yang terkait dengan kode yang kami buat, kami akan memperbaikinya tanpa biaya tambahan.',
+    category: 'Layanan',
+  },
+  {
+    question: 'Apakah ada kebijakan refund?',
+    answer:
+      'Proyek yang sudah disepakati (DP sudah ditransfer) tidak dapat di-refund. Oleh karena itu, kami menyarankan untuk mendiskusikan semua detail dan kebutuhan proyek secara jelas sebelum memulai kerjasama.',
+    category: 'Biaya',
   },
 ];
 

@@ -38,8 +38,8 @@ export const Hero = () => {
             animation='blurInDown'
             duration={0.3}
           >
-            Kami Jokiin Proyek <br className='md:hidden' /> Kodingan Kamu,{' '}
-            <br />
+            Kami Bantu Selesaikan Proyek <br className='md:hidden' /> Kodingan
+            Kamu, <br />
             Mulai dari{' '}
             <span className='text-primary'>
               <CountUp

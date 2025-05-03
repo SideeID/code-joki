@@ -85,13 +85,16 @@ export function OrderForm() {
       : !!formData.deadline.flexibility;
 
   return (
-    <section id='order' className='py-16 px-4 bg-slate-50 dark:bg-black/30'>
+    <section
+      id='order'
+      className='py-10 sm:py-16 px-2 sm:px-4 bg-slate-50 dark:bg-black/30'
+    >
       <div className='mx-auto max-w-screen-xl'>
-        <div className='text-center mb-12'>
+        <div className='text-center mb-8 sm:mb-12'>
           <TextAnimate
             as={'h2'}
             once
-            className='text-3xl sm:text-4xl font-bold mb-4'
+            className='text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4'
             animation='blurInDown'
           >
             Pesan Sekarang
@@ -99,17 +102,17 @@ export function OrderForm() {
           <TextAnimate
             as={'p'}
             once
-            className='text-lg text-muted-foreground max-w-2xl mx-auto'
+            className='text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto'
             animation='fadeIn'
             delay={0.2}
           >
             Mulai proyek Anda dengan mengisi formulir pemesanan di bawah ini
           </TextAnimate>
         </div>
-        <div className='max-w-3xl mx-auto relative min-h-[400px] bg-white dark:bg-black/50 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-800'>
+        <div className='max-w-full sm:max-w-3xl mx-auto relative min-h-[400px] bg-white dark:bg-black/50 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-800'>
           {/* Progress indicator */}
-          <div className='bg-gray-100 dark:bg-gray-800/50 py-4 px-6 border-b border-gray-200 dark:border-gray-700'>
-            <div className='flex justify-between items-center'>
+          <div className='bg-gray-100 dark:bg-gray-800/50 py-3 sm:py-4 px-3 sm:px-6 border-b border-gray-200 dark:border-gray-700'>
+            <div className='flex justify-between items-center text-xs sm:text-base'>
               <div className='flex items-center space-x-2'>
                 <div
                   className={cn(
@@ -124,7 +127,7 @@ export function OrderForm() {
                 <span
                   className={step >= 0 ? 'text-foreground' : 'text-gray-500'}
                 >
-                  Pilih Jenis
+                  Jenis
                 </span>
               </div>
               <div className='h-0.5 w-12 bg-gray-300 dark:bg-gray-700'></div>
@@ -174,7 +177,7 @@ export function OrderForm() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.3 }}
-                className='p-6'
+                className='p-3 sm:p-6'
               >
                 <StepProjectType onSelect={handleSelectProjectType} />
               </motion.div>
@@ -186,7 +189,7 @@ export function OrderForm() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className='p-6'
+                className='p-3 sm:p-6'
               >
                 <StepDescription
                   description={formData.description}
@@ -204,7 +207,7 @@ export function OrderForm() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className='p-6'
+                className='p-3 sm:p-6'
               >
                 <StepDeadline
                   deadline={formData.deadline}

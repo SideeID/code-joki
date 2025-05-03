@@ -91,14 +91,20 @@ export function StepDeadline({
       <div className='flex justify-between mt-8'>
         <button
           type='button'
-          className='btn btn-outline flex items-center gap-2'
+          className='px-5 py-0.5 border-2 border-black dark:border-white uppercase bg-white text-black transition duration-200 text-xs sm:text-sm shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)] flex items-center gap-2'
           onClick={onBack}
         >
           <ChevronLeft className='w-4 h-4' /> Kembali
         </button>
         <button
           type='button'
-          className='btn btn-success flex items-center'
+          className={`px-5 py-0.5 border-2 uppercase transition duration-200 text-xs sm:text-sm flex items-center
+            ${
+              isValid
+                ? 'border-black dark:border-white bg-white text-black shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)]'
+                : 'border-gray-300 dark:border-gray-700 bg-gray-200 text-gray-400 dark:bg-gray-800 dark:text-gray-500 shadow-none cursor-not-allowed'
+            }
+          `}
           onClick={onSubmit}
           disabled={!isValid}
         >

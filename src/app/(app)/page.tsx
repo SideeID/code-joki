@@ -5,6 +5,7 @@ import {
   MarqueeMember,
   CallToActionJoin,
   ReadyProjects,
+  OrderForm,
 } from '@/components/page/home';
 import { Shade } from '@/components/ui/shade';
 import { generateMetadata } from '@/lib/metadata';
@@ -30,6 +31,8 @@ export default function Home() {
       <About />
       <Shade className='border-y' />
       <ReadyProjects />
+      <Shade className='border-y' />
+      <OrderForm />
       <Shade className='border-y' />
       <CallToActionJoin />
       <Shade

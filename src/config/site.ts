@@ -1,4 +1,4 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
 
 export const siteConfig = {
   title: 'CodeJoki - Jasa Pemrograman dan Tugas Coding Profesional',
@@ -35,7 +35,8 @@ export const siteConfig = {
   twitter: {
     card: 'summary_large_image',
     title: 'CodeJoki - Jasa Pemrograman dan Tugas Coding Profesional',
-    description: 'Jasa pembuatan proyek dan tugas pemrograman berkualitas tinggi dengan harga terjangkau.',
+    description:
+      'Jasa pembuatan proyek dan tugas pemrograman berkualitas tinggi dengan harga terjangkau.',
     creator: '@side__id',
     images: [`${SITE_URL}/og.jpg`],
   },

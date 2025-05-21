@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CodeJoki
 
-## Getting Started
+Website resmi untuk berjualan jasa pemrograman dan pengerjaan tugas coding profesional. Dikelola oleh programmer freelancer Indonesia, CodeJoki menawarkan solusi cepat, berkualitas, dan terpercaya untuk berbagai kebutuhan proyek IT, tugas kuliah, pembuatan website, dan konsultasi pemrograman.
 
-First, run the development server:
+## Fitur
+
+- Pemesanan jasa pemrograman berbagai bahasa & framework
+- Bantuan pengerjaan tugas kuliah IT
+- Pembuatan website dan aplikasi custom
+- Konsultasi & revisi proyek
+- Komunikasi mudah via WhatsApp & Instagram
+
+## Teknologi
+
+- [Next.js](https://nextjs.org) (App Router)
+- TypeScript
+- [Geist Font](https://vercel.com/font)
+- Deploy-ready untuk Vercel
+
+## Cara Menjalankan
+
+Jalankan server pengembangan:
 
 ```bash
 npm run dev
-# or
+# atau
 yarn dev
-# or
+# atau
 pnpm dev
-# or
+# atau
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Struktur Proyek
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/` — Halaman utama & layout
+- `src/components/` — Komponen UI
+- `src/config/` — Konfigurasi situs
+- `public/` — Gambar & aset publik
 
-## Learn More
+## Kontak & Pemesanan
 
-To learn more about Next.js, take a look at the following resources:
+- WhatsApp: [Klik di sini](https://wa.me/+6285157900849)
+- Instagram: [@side\_\_id](https://www.instagram.com/side__id/)
+- GitHub: [sideeID](https://github.com/sideeID)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Lisensi
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Proyek ini dikelola secara pribadi dan tidak untuk penggunaan ulang tanpa izin.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Website jasa pemrograman & coding profesional — Solusi cepat, harga terjangkau, hasil terbaik!

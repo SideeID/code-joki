@@ -1,4 +1,4 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://code-joki.web.id';
 
 export const siteConfig = {
   title: 'CodeJoki - Jasa Pemrograman dan Tugas Coding Profesional',
@@ -39,9 +39,6 @@ export const siteConfig = {
       'Jasa pembuatan proyek dan tugas pemrograman berkualitas tinggi dengan harga terjangkau.',
     creator: '@side__id',
     images: [`${SITE_URL}/og.jpg`],
-  },
-  verification: {
-    google: 'tambahkan-verification-code-google',
   },
   links: {
     facebook: '#',

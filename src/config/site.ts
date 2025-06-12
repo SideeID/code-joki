@@ -40,6 +40,9 @@ export const siteConfig = {
     creator: '@side__id',
     images: [`${SITE_URL}/og.jpg`],
   },
+  verification: {
+    google: 'google-site-verification=your-google-verification-code',
+  },
   links: {
     facebook: '#',
     discord: '#',

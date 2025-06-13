@@ -41,7 +41,7 @@ export const siteConfig = {
     images: [`${SITE_URL}/og.jpg`],
   },
   verification: {
-    google: 'google-site-verification=your-google-verification-code',
+    google: 'google-site-verification=KlSMf5OruHZiqYYqzKeOUZVI6JmgxTg8uFr7FMxz0t0',
   },
   links: {
     facebook: '#',

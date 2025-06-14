@@ -43,8 +43,10 @@ export const siteConfig = {
   verification: {
     google:
       'google-site-verification=KlSMf5OruHZiqYYqzKeOUZVI6JmgxTg8uFr7FMxz0t0',
-    yandex: 'yandex-verification: 21570e3f60f3864b',
-    microsoft: 'msvalidate.01=D020E6CFC377DF8AE9FC6C64551CF068',
+    yandex: '21570e3f60f3864b',
+    other: {
+      'msvalidate.01': 'D020E6CFC377DF8AE9FC6C64551CF068',
+    },
   },
   links: {
     facebook: '#',

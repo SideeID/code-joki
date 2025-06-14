@@ -19,7 +19,7 @@ export const Logo = ({
   priority = true,
   width = 100,
   height = 75,
-  alt = '',
+  alt = 'CodeJoki Logo',
   lightSrc = '/SideID-Labs-transparant-2.png',
   darkSrc = '/SideID-Labs-transparant.png',
   ...props
@@ -35,6 +35,8 @@ export const Logo = ({
       width={width}
       height={height}
       priority={priority}
+      quality={85}
+      sizes='(max-width: 768px) 100px, (max-width: 1200px) 150px, 200px'
       {...props}
     />
   );

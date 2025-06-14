@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 
 export const PreloadCriticalAssets = () => {
   useEffect(() => {
-    // Preload critical images
     const criticalImages = [
       '/SideID-Labs-transparant-2.png',
       '/SideID-Labs-transparant.png',
